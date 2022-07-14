@@ -1,0 +1,44 @@
+<h1 mat-dialog-title>Ajout d'un rendez-vous</h1>
+<div mat-dialog-content>
+   <form [formGroup]="cliniqueForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Nom Complet</mat-label>
+      <input formControlName="nomComplet" matInput placeholder="Name">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Numero Patient</mat-label>
+      <input formControlName="numeroPatient" matInput placeholder="Numero">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Type Prestation</mat-label>
+      <mat-select formControlName="typePrestation" placeholder="Prestation">
+          <mat-option value="Analyse">Analyse</mat-option>
+          <mat-option value="Radio">Radio</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Choisir une date</mat-label>
+      <input formControlName="date" matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <label for=""><h1>Etat Rendez-Vous</h1></label>
+    <mat-radio-group formControlName="etatRendezVous" class="example-radio-group">
+      <mat-radio-button class="example-radio-button" *ngFor="let rendezvous of etatRendezVous" [value]="rendezvous">
+          {{rendezvous}}
+      </mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field appearance="outline">
+      <mat-label>Nom Medecin</mat-label>
+      <input formControlName="nomMedecin" matInput placeholder="Medecin">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Nom Medicament</mat-label>
+      <input formControlName="nomMedicament" matInput placeholder="Medicament">
+    </mat-form-field>
+   </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+<button mat-raised-button color="warn" mat-dialog-close>Annuler</button>
+<button style="margin-left : 8px" mat-raised-button color="primary" (click)="addRendezVous()">{{actionBtn}}</button>
+</div>

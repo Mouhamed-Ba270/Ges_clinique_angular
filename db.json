@@ -1,0 +1,34 @@
+{
+  "cliniqueList": [
+    {
+      "nomComplet": "John Foster",
+      "numeroPatient": "770000000",
+      "typePrestation": "Radio",
+      "etatRendezVous": "En Cours",
+      "nomMedecin": "Dr Fatou",
+      "nomMedicament": "aspegic",
+      "date": "2022-06-19T00:00:00.000Z",
+      "id": 1
+    },
+    {
+      "nomComplet": "Robert Franck",
+      "numeroPatient": "776666677",
+      "typePrestation": "Analyse",
+      "etatRendezVous": "En Cours",
+      "nomMedecin": "Dr Lee",
+      "nomMedicament": "Cedaspir",
+      "date": "2022-06-30T00:00:00.000Z",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
